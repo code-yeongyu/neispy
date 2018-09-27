@@ -8,7 +8,7 @@ bot = telebot.TeleBot(API_TOKEN)
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message) :
     bot.reply_to(message, "경기도 양주시에 위치한, 덕현중학교의 급식을 받아오는 텔레그램 봇 입니다.\n나이스 홈페이지에서 식단표를 파싱해옵니다.")
-    bot.reply_to(message, "명령어 목록\n/week 이번주의 급식을 모두 받기\n/noti 매일 8시마다 급식알림을 보내기")
+    bot.reply_to(message, "명령어 목록\n/week 이번주의 급식을 모두 받기")
 
 @bot.message_handler(commands=['week'])
 def send_meal(message) :
